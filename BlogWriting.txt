@@ -1,0 +1,35 @@
+"Reaching a destination via the shortest route is a daily activity we all do"
+A* Algorithm:
+A* is one of the most successful informed search algorithms to find the shortest path between nodes or graphs, as it uses information about path cost and also uses heuristics to find the solution.
+
+Speciality of A* Algo is it  achieves "optimality" and "completeness",which are considered as  two valuable properties  of a search algorithm.
+Here the optimality refers to:guarantees to find the best possible solution. 
+Here the completeness refers to: that if a solution to a given problem exists, then the  algo is guaranteed to find it.
+
+Ok!So,its time to know few Terminologies to move forward:
+
+Node  — All potential position or stops with a unique identification
+Transition — The act of moving between nodes.
+StartingNode — point where we  start searching
+ReachingNode/GoalNode/TargetNode — The target/Goal to stop searching.
+Search Space — A collection of nodes
+Cost — NumericalValue (it can be  distance, time,or any sort of amount/fare) for the path from a node to another node.
+g(n) — this represents the exact cost of the path from the starting node to any node n
+h(n) — this represents the heuristic estimated cost from node n to the goal node.
+f(n) — lowest cost in the neighboring node n
+Each time A* enters a node, it calculates the cost, f(n)(n being the neighboring node), to travel to all of the neighboring nodes, and then enters the node with the lowest value of f(n).
+These values we calculate using the following formula:
+f(n) = g(n) + h(n)
+
+Now Coming to my RealWorldApplicationProblem:
+
+So,ya!Finally we are given Semester Break Holidays  called WinterVacation,now i need to plan my journey.I am presently in Tadepalligudem and wish to go quickly to my hometown Guntur
+which is like 3-4 hours of Duration.I have 2 Choices either going via Eluru or via Vizag.I want to  reach my hometown quickly So,i could trace my least time taken  Path to reach my hometown using A* Algorithm.
+
+My Nodes Here represent Cities Names,
+StartNode:Tadepalligudem
+TargetNode:Guntur
+SearchSpace :Collection of my cities(Tadepalligudem,Eluru,Vizag,Guntur)
+Cost:I Considered the time(No of Hours) Attribute here.
+Each time my A* enters the city it chooses the least distanced city until it reaches the target/Destination.
+Heuristics here is my assumed time taken to travel.It should not exceed the actual time taken.
